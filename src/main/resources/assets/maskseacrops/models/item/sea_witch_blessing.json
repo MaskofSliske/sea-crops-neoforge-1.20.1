@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "maskseacrops:item/sea_witch_blessing"
+  }
+}

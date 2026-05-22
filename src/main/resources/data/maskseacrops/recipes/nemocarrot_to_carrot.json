@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "maskseacrops:nemo_carrot_spore"},
+    {"item": "maskseacrops:sea_witch_blessing"}
+  ],
+  "result": {
+    "item": "minecraft:carrot",
+    "count": 1
+  }
+}

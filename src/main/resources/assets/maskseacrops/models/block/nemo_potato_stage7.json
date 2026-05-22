@@ -1,0 +1,7 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "maskseacrops:block/nemo_potato_stage7"
+  }
+}

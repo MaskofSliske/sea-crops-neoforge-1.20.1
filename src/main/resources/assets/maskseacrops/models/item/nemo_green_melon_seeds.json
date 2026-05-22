@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "maskseacrops:item/nemo_green_melon_seeds"
+  }
+}

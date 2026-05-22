@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "maskseacrops:sea_wheat_seeds"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wheat",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "maskseacrops:sea_wheat",
+              "properties": { "age":  "7"}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

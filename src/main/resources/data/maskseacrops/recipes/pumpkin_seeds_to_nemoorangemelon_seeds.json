@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:pumpkin_seeds"},
+    {"item": "maskseacrops:sea_witch_blessing"}
+  ],
+  "result": {
+    "item": "maskseacrops:nemo_orange_melon_seeds",
+    "count": 1
+  }
+}
