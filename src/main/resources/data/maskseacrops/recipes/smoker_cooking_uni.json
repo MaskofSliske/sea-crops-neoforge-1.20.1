@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 150,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "maskseacrops:cactus_urchin_uni"
+  },
+  "result": {
+    "item": "maskseacrops:cooked_cactus_urchin_uni"
+  }
+}

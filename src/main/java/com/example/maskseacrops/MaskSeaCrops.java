@@ -82,7 +82,8 @@ public class MaskSeaCrops
     public static final RegistryObject<Item> SUGAR_KELP_ITEM = ITEMS.register("sugar_kelp", () -> new ItemNameBlockItem(SUGAR_KELP.get(), new Item.Properties()));
 
     //Sea Witch's Blessing entry. An item that converts most of this mod's crops and certain items into their vanilla variants. Also helps you craft the modded items.
-    public static final RegistryObject<Item> SEA_WITCH_BLESSING = ITEMS.register("sea_witch_blessing", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+    //It will return itself after crafting in this mod. DO NOT ADD "remainItem" to any recipes, doing so will make it duplicate! Just add like a normal item!
+    public static final RegistryObject<Item> SEA_WITCH_BLESSING = ITEMS.register("sea_witch_blessing", () -> new SeaWitchBlessingItem(new Item.Properties().rarity(Rarity.RARE)));
 
     //Nemo's Green Melon entry. This is the sea plant that grows regular melons!
     public static final RegistryObject<Block> NEMO_GREEN_MELON = BLOCKS.register("nemo_green_melon", () -> new NemoGreenMelonBlock(BlockBehaviour.Properties.of().noCollission().strength(0.1f).sound(SoundType.WET_GRASS).randomTicks().lightLevel(state -> 15)));
@@ -108,6 +109,8 @@ public class MaskSeaCrops
     public static final RegistryObject<Item> CACTUS_URCHIN_EGG = ITEMS.register("cactus_urchin_egg", () -> new CactusUrchinEggItem(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> CACTUS_URCHIN_UNI = ITEMS.register("cactus_urchin_uni", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.6f).build())));
     public static final RegistryObject<Item> COOKED_CACTUS_URCHIN_UNI = ITEMS.register("cooked_cactus_urchin_uni", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationMod(0.8f).build())));
+    public static final RegistryObject<Item> CACTUS_URCHIN_SHELL = ITEMS.register("cactus_urchin_shell", () -> new Item(new Item.Properties()));
+
 
     // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
     public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
@@ -139,6 +142,7 @@ public class MaskSeaCrops
                 output.accept(CACTUS_URCHIN_EGG.get());
                 output.accept(CACTUS_URCHIN_UNI.get());
                 output.accept(COOKED_CACTUS_URCHIN_UNI.get());
+                output.accept(CACTUS_URCHIN_SHELL.get());
             }).build());
 
     //Setting up modded loot drops in global loot modifier
@@ -207,6 +211,7 @@ public class MaskSeaCrops
     {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+        LOGGER.info("Cactus Urchin registry name: {}", ForgeRegistries.ENTITY_TYPES.getKey(ModEntities.CACTUS_URCHIN.get()));
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

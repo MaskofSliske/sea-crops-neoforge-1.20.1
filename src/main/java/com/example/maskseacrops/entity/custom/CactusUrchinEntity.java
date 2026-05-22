@@ -2,6 +2,7 @@ package com.example.maskseacrops.entity.custom;
 
 import com.example.maskseacrops.MaskSeaCrops;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
@@ -34,6 +35,11 @@ public class CactusUrchinEntity extends Animal {
     @Override
     public net.minecraft.world.entity.MobType getMobType() {
         return net.minecraft.world.entity.MobType.WATER;
+    }
+
+    @Override
+    public boolean canBreatheUnderwater() {
+        return true;
     }
 
     @Override
@@ -73,8 +79,17 @@ public class CactusUrchinEntity extends Animal {
     }
 
     @Override
+    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
+        super.dropCustomDeathLoot(source, looting, recentlyHit);
+        this.spawnAtLocation(new ItemStack(MaskSeaCrops.CACTUS_URCHIN_SHELL.get(), 1 + this.random.nextInt(2)));
+        int uniCount = this.random.nextInt(3);
+        if (uniCount > 0) {
+            this.spawnAtLocation(new ItemStack(MaskSeaCrops.CACTUS_URCHIN_UNI.get(), uniCount));
+        }
+    }
+
+    @Override
     public void playerTouch(Player player) {
         player.hurt(this.damageSources().cactus(), 1.0f);
     }
-
 }

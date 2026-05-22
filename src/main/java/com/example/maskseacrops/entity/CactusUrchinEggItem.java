@@ -38,9 +38,9 @@ public class CactusUrchinEggItem extends Item {
     public boolean onEntityItemUpdate(ItemStack stack, net.minecraft.world.entity.item.ItemEntity entity) {
         if (!entity.level().isClientSide && entity.isInWater()) {
             int age = entity.getAge();
-            // Only check at 3 specific points during the item's lifespan
-            if (age == 1200 || age == 3000 || age == 4800) {
-                if (entity.level().getRandom().nextFloat() < 0.6f) {
+            // Only check at 8 specific points during the item's lifespan of just 4 minutes
+            if (age == 600 || age == 1200 || age== 1800 || age == 2400 || age == 3000 || age == 3600 || age == 4200 || age == 4800) {
+                if (entity.level().getRandom().nextFloat() < 0.8f) {
                     CactusUrchinEntity urchin = ModEntities.CACTUS_URCHIN.get().create(entity.level());
                     if (urchin != null) {
                         urchin.setBaby(true);

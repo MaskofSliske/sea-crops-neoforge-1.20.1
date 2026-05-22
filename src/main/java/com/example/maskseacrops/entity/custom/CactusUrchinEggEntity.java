@@ -47,7 +47,7 @@ public class CactusUrchinEggEntity extends ThrowableItemProjectile {
             if (hatchTimer <=0) {
                 if (!this.level().isClientSide) {
                     //Currently, this is at 60%, can change later for balance reasons ofc
-                    if (this.random.nextFloat() < 0.6f) {
+                    if (this.random.nextFloat() < 0.8f) {
                         CactusUrchinEntity urchin = ModEntities.CACTUS_URCHIN.get().create(this.level());
                         if (urchin != null) {
                             urchin.setBaby(true);
