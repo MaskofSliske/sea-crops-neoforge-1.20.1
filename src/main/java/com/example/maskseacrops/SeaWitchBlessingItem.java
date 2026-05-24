@@ -4,7 +4,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 
-//It will return itself after crafting in this mod. DO NOT ADD "remainItem" to any recipes, doing so will make it duplicate! Just add like a normal item!
+/**
+ * It WILL return itself after crafting in this mod.
+ * DO NOT ADD "remainItem" to any recipes that include this item, for this item!
+ * Doing so will cause it to duplicate! Just add it like any normal item!
+ */
 
 public class SeaWitchBlessingItem extends Item {
     public SeaWitchBlessingItem(Item.Properties properties) {
