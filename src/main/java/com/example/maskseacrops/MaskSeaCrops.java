@@ -20,6 +20,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -196,6 +197,20 @@ public class MaskSeaCrops
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+
+        //Making my modded items compostable
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(SEA_WHEAT_SEEDS.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(CACTUS_URCHIN_SHELL.get(), 0.5f);
+            ComposterBlock.COMPOSTABLES.put(CACTUS_URCHIN_EGG.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(CACTUS_URCHIN_UNI.get(), 0.5f);
+            ComposterBlock.COMPOSTABLES.put(NEMO_BEETROOT_SPORE.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(NEMO_CARROT_SPORE.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(NEMO_POTATO_SPORE.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(NEMO_GREEN_MELON_SEEDS.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(NEMO_ORANGE_MELON_SEEDS.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(SUGAR_KELP_ITEM.get(), 0.3f);
+        });
     }
 
     // Add the example block item to the building blocks tab
