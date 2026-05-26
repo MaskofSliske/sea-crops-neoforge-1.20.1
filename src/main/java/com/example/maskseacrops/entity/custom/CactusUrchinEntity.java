@@ -120,9 +120,12 @@ public class CactusUrchinEntity extends Animal {
 
     @Override
     public void playerTouch(Player player) {
-        player.hurt(this.damageSources().cactus(), 1.0f);
-        if (this.level().isClientSide) {
-            this.attackAnimationState.startIfStopped(this.tickCount);
+        float distance = (float) this.distanceTo(player);
+        if (distance <= 1.0f) {
+            player.hurt(this.damageSources().cactus(), 1.0f);
+            if (this.level().isClientSide) {
+                this.attackAnimationState.startIfStopped(this.tickCount);
+            }
         }
     }
 
