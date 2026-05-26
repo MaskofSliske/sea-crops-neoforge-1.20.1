@@ -1,0 +1,19 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+
+      "minecraft:deep_ocean",
+      "minecraft:deep_lukewarm_ocean",
+      "minecraft:deep_cold_ocean",
+      "minecraft:deep_frozen_ocean"
+
+  ],
+  "spawners": [
+    {
+      "type": "maskseacrops:cactus_urchin",
+      "weight": 7,
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ]
+}

@@ -23,7 +23,6 @@ public class SiltFeature extends Feature<NoneFeatureConfiguration> {
 
         //Making sure it only replaces sand or gravel
         if (!level.getBlockState(pos.below()).is(Blocks.SAND) && !level.getBlockState(pos.below()).is(Blocks.GRAVEL)) {
-            System.out.println("Failed block check!");
             return false;
         }
 

@@ -17,7 +17,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<CactusUrchinEntity>> CACTUS_URCHIN =
             ENTITIES.register("cactus_urchin", () -> EntityType.Builder
                     .<CactusUrchinEntity>of(CactusUrchinEntity::new, MobCategory.CREATURE)
-                    .sized(0.8F, 0.4F)
+                    .sized(0.5F, 0.5F)
                     .build("cactus_urchin"));
 
     public static final RegistryObject<EntityType<CactusUrchinEggEntity>> CACTUS_URCHIN_EGG_ENTITY =

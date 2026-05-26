@@ -86,8 +86,7 @@ public class CactusUrchinEntity extends Animal {
                 eggLayTimer = 12000 + this.random.nextInt(2000);
             } else {
                 eggLayTimer--;
-            }
-        }
+            }        }
     }
 
     @Override
@@ -129,7 +128,6 @@ public class CactusUrchinEntity extends Animal {
 
     public boolean isMoving() {
         boolean moving = this.getDeltaMovement().horizontalDistanceSqr() > 0.0001D;
-        System.out.println("isMoving: " + moving + " speed:" + this.getDeltaMovement().horizontalDistanceSqr());
         return moving;
     }
 }
