@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:ocean",
+    "minecraft:lukewarm_ocean",
+    "minecraft:warm_ocean"
+  ],
+  "features": "maskseacrops:sugar_kelp",
+  "step": "vegetal_decoration"
+}

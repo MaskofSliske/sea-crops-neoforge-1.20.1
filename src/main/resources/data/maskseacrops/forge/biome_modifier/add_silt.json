@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:ocean",
+    "minecraft:warm_ocean",
+    "minecraft:lukewarm_ocean",
+    "minecraft:river"
+  ],
+  "features": "maskseacrops:silt",
+  "step": "vegetal_decoration"
+}

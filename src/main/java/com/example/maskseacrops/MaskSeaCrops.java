@@ -24,6 +24,9 @@ import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.MapColor;
@@ -150,6 +153,13 @@ public class MaskSeaCrops
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIERS =
             DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, MODID);
 
+    //Registering Sugar Kelp to spawn organically in the world alongside the normal kelp
+    public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, MODID);
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> SUGAR_KELP_FEATURE = FEATURES.register("sugar_kelp", () -> new SugarKelpFeature(NoneFeatureConfiguration.CODEC));
+
+    //Making silt spawn organically
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> SILT_FEATURE = FEATURES.register("silt", () -> new SiltFeature(NoneFeatureConfiguration.CODEC));
+
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> SEAGRASS_DROPS_SEEDS =
             LOOT_MODIFIERS.register("seagrass_drops_seeds", SeagrassDropsSeeds.CODEC);
 
@@ -159,6 +169,9 @@ public class MaskSeaCrops
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        //Registering features so we can get the custom kelp
+        FEATURES.register(modEventBus);
 
         //Registering entities
         ENTITIES.register(modEventBus);

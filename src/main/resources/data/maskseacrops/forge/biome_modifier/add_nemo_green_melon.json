@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:ocean",
+    "minecraft:warm_ocean",
+    "minecraft:lukewarm_ocean"
+  ],
+  "features": "maskseacrops:nemo_green_melon",
+  "step": "vegetal_decoration"
+}

@@ -65,7 +65,7 @@ public abstract class NemoVineBlock extends BushBlock {
         BlockState aboveState = level.getBlockState(above);
 
         if (age < MAX_AGE) {
-            if (random.nextInt(5) == 0) {
+            if (random.nextInt(20) == 0) {
                 level.setBlock(pos, state.setValue(AGE, age + 1), 2);
             }
         } else {
