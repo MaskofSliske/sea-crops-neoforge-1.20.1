@@ -115,6 +115,18 @@ public class MaskSeaCrops
     public static final RegistryObject<Item> COOKED_CACTUS_URCHIN_UNI = ITEMS.register("cooked_cactus_urchin_uni", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationMod(0.8f).build())));
     public static final RegistryObject<Item> CACTUS_URCHIN_SHELL = ITEMS.register("cactus_urchin_shell", () -> new Item(new Item.Properties()));
 
+    //These are the "optional" Create compatibility processing items for the rest of the colors, should one have a fully underwater playthrough.
+    public static final RegistryObject<Block> FINE_SILT = BLOCKS.register("fine_silt", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).strength(0.5f).sound(SoundType.SAND)));
+    public static final RegistryObject<Item> FINE_SILT_ITEM = ITEMS.register("fine_silt", () -> new BlockItem(FINE_SILT.get(), new Item.Properties()));
+    public static final RegistryObject<Item> YELLOW_OCHRE = ITEMS.register("yellow_ochre", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Block> YELLOW_OCHRE_BLOCK = BLOCKS.register("yellow_ochre_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_YELLOW).strength(0.5f).sound(SoundType.SAND)));
+    public static final RegistryObject<Item> YELLOW_OCHRE_BLOCK_ITEM = ITEMS.register("yellow_ochre_block", () -> new BlockItem(YELLOW_OCHRE_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BROWN_OCHRE = ITEMS.register("brown_ochre", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Block> BROWN_OCHRE_BLOCK = BLOCKS.register("brown_ochre_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(0.5f).sound(SoundType.SAND)));
+    public static final RegistryObject<Item> BROWN_OCHRE_BLOCK_ITEM = ITEMS.register("brown_ochre_block", () -> new BlockItem(BROWN_OCHRE_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> RED_OCHRE = ITEMS.register("red_ochre", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Block> RED_OCHRE_BLOCK = BLOCKS.register("red_ochre_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_RED).strength(0.5f).sound(SoundType.SAND)));
+    public static final RegistryObject<Item> RED_OCHRE_BLOCK_ITEM = ITEMS.register("red_ochre_block", () -> new BlockItem(RED_OCHRE_BLOCK.get(), new Item.Properties()));
 
     // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
     public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
@@ -135,6 +147,7 @@ public class MaskSeaCrops
             .icon(() -> SILT_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(SILT_ITEM.get());
+                output.accept(FINE_SILT_ITEM.get());
                 output.accept(SEA_WHEAT_SEEDS.get());
                 output.accept(SUGAR_KELP_ITEM.get());
                 output.accept(SEA_WITCH_BLESSING.get());
@@ -147,6 +160,12 @@ public class MaskSeaCrops
                 output.accept(CACTUS_URCHIN_UNI.get());
                 output.accept(COOKED_CACTUS_URCHIN_UNI.get());
                 output.accept(CACTUS_URCHIN_SHELL.get());
+                output.accept(BROWN_OCHRE.get());
+                output.accept(BROWN_OCHRE_BLOCK_ITEM.get());
+                output.accept(RED_OCHRE.get());
+                output.accept(RED_OCHRE_BLOCK_ITEM.get());
+                output.accept(YELLOW_OCHRE.get());
+                output.accept(YELLOW_OCHRE_BLOCK_ITEM.get());
             }).build());
 
     //Setting up modded loot drops in global loot modifier

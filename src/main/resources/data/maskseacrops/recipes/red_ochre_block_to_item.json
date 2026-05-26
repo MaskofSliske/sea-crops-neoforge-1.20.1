@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "maskseacrops:red_ochre_block"}
+  ],
+  "result": {
+    "item": "maskseacrops:red_ochre",
+    "count": 9
+  }
+}

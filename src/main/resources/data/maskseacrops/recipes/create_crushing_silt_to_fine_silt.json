@@ -1,0 +1,23 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ],
+      "recipe": "create:crushing",
+      "ingredients": [
+        {"item": "maskseacrops:silt"}
+      ],
+      "results": [
+        {"item": "maskseacrops:yellow_ochre", "count": 3},
+        {"item": "maskseacrops:red_ochre", "chance": 0.45},
+        {"item": "minecraft:quartz"},
+        {"item": "minecraft:clay_ball", "chance": 0.1}
+      ]
+    }
+  ]
+}

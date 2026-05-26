@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "maskseacrops:block/yellow_ochre_block"
+  }
+}
