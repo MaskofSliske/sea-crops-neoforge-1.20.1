@@ -1,29 +1,20 @@
 
-Installation information
+Mask's Sea Crops
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+A little something for a group of friends.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+We all got tired of a distinct lack of underwater diversity, compatibility with the mods we like, and options for a fully water-dwelling playthrough.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+This is definitely a lot more than a crop mod: there is hidden lore, a new growth medium, a cute lil urchin to farm, and even more to come!
 
-Mapping Names:
-============
-The MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+While this mod was originally created for NeoForge, I will make Fabric and Quilt versions.
 
-MDG Legacy:
-==========
-This template uses [ModDevGradle Legacy](https://github.com/neoforged/ModDevGradle). Documentation can be found [here](https://github.com/neoforged/ModDevGradle/blob/main/LEGACY.md).
+How do I get started?
+=======
+You just need to find a shipwreck (or a few) and get 8 emeralds and a Heart of the Sea to craft a Sea Witch's Blessing.
+It lets you transmute certain items into their ocean counterparts, and vice versa.
+The crops grow on silt, commonly found in the warmer, shallower parts of the ocean.
+If you want an urchin buddy (or really need food), you can find them in deep ocean-type biomes!
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+If you have Create, you can grind up the silt, wash it, and get ochres for more dye-obtaining options.
