@@ -67,11 +67,6 @@ public class MaskSeaCrops
     //Making a Deferred Register for an entity
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MODID);
 
-    // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
-    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
-
     // Silt entry, this is the primary block to grow stuff underwater in this mod!
     public static final RegistryObject<Block> SILT = BLOCKS.register("silt", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).strength(0.5f).sound(SoundType.SAND)));
     public static final RegistryObject<Item> SILT_ITEM = ITEMS.register("silt", () -> new BlockItem(SILT.get(), new Item.Properties()));
@@ -127,18 +122,6 @@ public class MaskSeaCrops
     public static final RegistryObject<Item> RED_OCHRE = ITEMS.register("red_ochre", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Block> RED_OCHRE_BLOCK = BLOCKS.register("red_ochre_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_RED).strength(0.5f).sound(SoundType.SAND)));
     public static final RegistryObject<Item> RED_OCHRE_BLOCK_ITEM = ITEMS.register("red_ochre_block", () -> new BlockItem(RED_OCHRE_BLOCK.get(), new Item.Properties()));
-
-    // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
-    public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEat().nutrition(1).saturationMod(2f).build())));
-
-    // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
-    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
-            }).build());
 
     //Mask's Sea Crops creative tab!
     public static final RegistryObject<CreativeModeTab> SEA_CROPS_TAB = CREATIVE_MODE_TABS.register("sea_crops_tab", () -> CreativeModeTab.builder()
@@ -245,11 +228,11 @@ public class MaskSeaCrops
         });
     }
 
-    // Add the example block item to the building blocks tab
+    // Add the example block item to the building blocks tab (Mask note: had to change this to silt because it kept throwing errors if I tried to delete any examples lol)
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-            event.accept(EXAMPLE_BLOCK_ITEM);
+            event.accept(SILT_ITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
