@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:sugar_cane"},
+    {"item": "maskseacrops:sea_witch_blessing"}
+  ],
+  "result": {
+    "item": "maskseacrops:sugar_kelp_item",
+    "count": 1
+  }
+}

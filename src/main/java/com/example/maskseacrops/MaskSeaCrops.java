@@ -109,6 +109,7 @@ public class MaskSeaCrops
     public static final RegistryObject<Item> CACTUS_URCHIN_UNI = ITEMS.register("cactus_urchin_uni", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.6f).build())));
     public static final RegistryObject<Item> COOKED_CACTUS_URCHIN_UNI = ITEMS.register("cooked_cactus_urchin_uni", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationMod(0.8f).build())));
     public static final RegistryObject<Item> CACTUS_URCHIN_SHELL = ITEMS.register("cactus_urchin_shell", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CACTUS_URCHIN_SPAWN_EGG = ITEMS.register("cactus_urchin_spawn_egg", () -> new net.minecraftforge.common.ForgeSpawnEggItem(ModEntities.CACTUS_URCHIN, 0xFFE1C2, 0xE0822B, new Item.Properties()));
 
     //These are the "optional" Create compatibility processing items for the rest of the colors, should one have a fully underwater playthrough.
     public static final RegistryObject<Block> FINE_SILT = BLOCKS.register("fine_silt", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).strength(0.5f).sound(SoundType.SAND)));
@@ -149,6 +150,7 @@ public class MaskSeaCrops
                 output.accept(RED_OCHRE_BLOCK_ITEM.get());
                 output.accept(YELLOW_OCHRE.get());
                 output.accept(YELLOW_OCHRE_BLOCK_ITEM.get());
+                output.accept(CACTUS_URCHIN_SPAWN_EGG.get());
             }).build());
 
     //Setting up modded loot drops in global loot modifier

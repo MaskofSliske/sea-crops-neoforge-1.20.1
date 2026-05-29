@@ -1,8 +1,8 @@
 {
-  "type": "minecraft:campfire_cooking",
+  "type": "minecraft:smelting",
   "category": "food",
   "cookingtime": 150,
-  "experience": 0.15,
+  "experience": 0.35,
   "ingredient": {
     "item": "maskseacrops:cactus_urchin_uni"
   },
