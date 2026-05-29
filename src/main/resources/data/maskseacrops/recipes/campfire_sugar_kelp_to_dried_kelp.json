@@ -2,11 +2,11 @@
   "type": "minecraft:campfire_cooking",
   "category": "food",
   "cookingtime": 150,
-  "experience": 0.15,
+  "experience": 0.1,
   "ingredient": {
-    "item": "maskseacrops:cactus_urchin_uni"
+    "item": "maskseacrops:sugar_kelp"
   },
   "result": {
-    "item": "maskseacrops:cooked_cactus_urchin_uni"
+    "item": "minecraft:dried_kelp"
   }
 }
